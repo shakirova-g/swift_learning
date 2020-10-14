@@ -1,0 +1,12 @@
+import UIKit
+
+func evenNumbers() {
+
+let arrayOfNumbers = [5,12,7,32]
+
+for element in arrayOfNumbers where element % 2 == 0 {
+    print (element)
+}
+}
+
+
