@@ -1,0 +1,55 @@
+import Foundation
+
+// 1. Решить квадратное уравнение
+
+let a:Float = 2
+let b:Float = 4
+let c:Float = 6
+var d:Float = b * b - (4 * a * c) // Дискриминант
+var x1: Float
+var x2: Float
+
+
+if (d < 0) {
+  print("Корней нет")
+} else if (d > 0) {
+    x1 = (-b + sqrt(d)) / 2 * a
+    x2 = (-b - sqrt(d)) / 2 * a
+    print(x1, x2)
+} else if (d == 0) {
+    x1 = (-b + sqrt(d)) / 2 * a
+    x2 = x1
+ print(x2)
+ }
+
+// 2. Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
+
+let a:Float = 2 // Катет 1
+let b:Float = 4 // Катет 1
+var c:Int
+var s:Float
+var p:Float
+
+s = (a * b) / 2
+print(s) // Площадь треугольника
+
+c = sqrt(pow(a,2) + pow(b,2))
+print(c) // Гипотенуза
+    
+p = a + b + c
+print(p) // Периметр треугольника
+
+
+// 3. Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.
+
+
+var investment:Float = 100
+var percentage:Float = (3 / 100)
+
+var annualInterest = investment * percentage // Доход за 1 год
+var depositAmountAfter1Year = investment + annualInterest  // Сумма вклада через 1 год
+var depositAmountAfter2Year = depositAmountAfter1Year + ( depositAmountAfter1Year * annualInterest) // Сумма вклада через 2 года
+var depositAmountAfter3Year = depositAmountAfter2Year + ( depositAmountAfter2Year * annualInterest) // Сумма вклада через 3 года
+var depositAmountAfter4Year = depositAmountAfter3Year + ( depositAmountAfter3Year * annualInterest) // Сумма вклада через 4 года
+var depositAmountAfter5Year = depositAmountAfter4Year + ( depositAmountAfter4Year * annualInterest) // Сумма вклада через 5 лет
+    print(depositAmountAfter5Year)
