@@ -1,12 +1,39 @@
-import UIKit
+import Foundation
+
+// 1. Написать функцию, которая определяет, четное число или нет.
 
 func evenNumbers() {
-
-let arrayOfNumbers = [5,12,7,32]
-
-for element in arrayOfNumbers where element % 2 == 0 {
-    print (element)
+let a = 7
+if a % 2 == 0 {
+    print(a)
 }
+   else if a % 2 != 0 {
+        print("No even numbers")
+
+    }
+
 }
+
+
+// 2. Написать функцию, которая определяет, делится ли число без остатка на 3.
+
+func numberIsExactlyDivisibleBy3 (){
+    let a = 7
+    if a % 3 == 0 {
+    print(a)
+    }
+    else if a % 3 != 0 {
+        print("No number is exactly divisible by 3")
+    }
+}
+
+
+// 3. Создать возрастающий массив из 100 чисел.
+
+var increasingArray = [Int]()
+for increasingArray in (1...100){
+print (increasingArray)
+}
+
 
 
